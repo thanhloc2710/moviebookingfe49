@@ -8,6 +8,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Profile from './pages/Profile/Profile';
+import TrangChu from './pages/TrangChu/TrangChu';
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
+        <Route exact path="/trangchu" component={TrangChu} />
+
         <Route exact path="/profile" component={Profile} />
         <Route exact path="*" component={PageNotFound} />
-
       </Switch>
     </BrowserRouter>
   );
