@@ -41,26 +41,26 @@ function Home(props) {
     //     })
     // },[]) // tham số thứ 2 useEffect là mảng rổng => ứng với componentDidMount của reacr LifeCycle
 
-    const getFilmsApi = async () => { // async function là function bất đồng bộ khi gọi nó, các hàm tiếp vẫn tiếp tục thực hiện
-        try {
-            let { data, status } = await axios({
-                url: 'http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01',
-                method: 'GET'
-            });
+    // const getFilmsApi = async () => { // async function là function bất đồng bộ khi gọi nó, các hàm tiếp vẫn tiếp tục thực hiện
+    //     try {
+    //         let { data, status } = await axios({
+    //             url: 'http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01',
+    //             method: 'GET'
+    //         });
 
-            // lệnh await bắt buộc các lệnh phía sau phải đợi đến khi hàm này thực thi xong thì mới làm tiếp
-            // console.log(promise);
-            // console.log(100/0);
+    //         // lệnh await bắt buộc các lệnh phía sau phải đợi đến khi hàm này thực thi xong thì mới làm tiếp
+    //         // console.log(promise);
+    //         // console.log(100/0);
 
-            if (status === 200) {
-                setDSPhim(data);
-            }
+    //         if (status === 200) {
+    //             setDSPhim(data);
+    //         }
             
-        } catch(ex) {
-            console.log(ex);
-            // chỉ cân bên trong xử lý try xảy ra lỗi => không làm nửa mà làm catch
-        }
-    }
+    //     } catch(ex) {
+    //         console.log(ex);
+    //         // chỉ cân bên trong xử lý try xảy ra lỗi => không làm nửa mà làm catch
+    //     }
+    // }
 
 
 

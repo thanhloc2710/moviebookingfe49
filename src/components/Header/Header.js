@@ -22,6 +22,9 @@ export default function Header() {
                         <li className="nav-item">
                             <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{color:"black"}} to="/login">Login</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{color:"black"}} to="/hoc">HOC</NavLink>
+                        </li>
 
 
                         <li className="nav-item dropdown">
