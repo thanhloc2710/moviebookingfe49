@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { dangNhapApiAction } from '../../redux/action/QuanLyNguoiDungAction';
+
 
 export default function Login(props) {
 
+    let dispatch = useDispatch();
     // this.state = {
     //    userLogin:{
     //         userName: '',
@@ -42,16 +46,21 @@ export default function Login(props) {
 
     const login = (e) => {
         e.preventDefault(); // Ngăn sự kiện sau khi submid reload lại trang
+
+        dispatch(dangNhapApiAction(userLogin))
+
         // kiểm tra userName, passWord = cybersoft hay không => chuyển về trang chủ ngược lại báo lỗi 
-        if(userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft'){
-            // props.history.goBack(); // goBack chuyển hướng trang trước link đến trang này
+        // if(userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft'){
+        //     // props.history.goBack(); // goBack chuyển hướng trang trước link đến trang này
 
-            props.history.push('/home'); // chuyển hướng đến trang (path) chỉ định => home
+        //     props.history.push('/home'); // chuyển hướng đến trang (path) chỉ định => home
 
-            // props.history.replace('/home'); // thay đổi thành route tương ứng
-        }else{
-            alert('Login fail !')
-        }
+        //     // props.history.replace('/home'); // thay đổi thành route tương ứng
+
+        //     //Gọi api đăng nhập
+        // }else{
+        //     alert('Login fail !')
+        // }
     }
 
 

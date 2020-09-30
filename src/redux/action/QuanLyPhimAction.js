@@ -53,8 +53,9 @@ export const layChiTietPhimAction = (maPhim) => {
         // sau khi lấy dữ liệu từ backend về sử dụng hàm dispatch đưa dữ liệu lên reducer 
         const action = {
             type: LAY_CHI_TIET_PHIM,
-            chiTietPhim: data
+            chiTietPhim: data,
         }
+        console.log(data)
         dispatch(action);
     }
 }

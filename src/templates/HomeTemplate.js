@@ -38,8 +38,9 @@ const HomeLayout = (props) => {
 
 export const HomeTemplate = ({Component,...restProps}) => {
     return <Route {...restProps} render={(propsRoute) => {
-        return <HomeLayout>
+        return <Fragment>
+            <Header />
             <Component {...propsRoute} />
-        </HomeLayout>
+        </Fragment>
     }} />
 }

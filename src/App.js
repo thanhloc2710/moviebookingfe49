@@ -14,6 +14,7 @@ import Profile from './pages/Profile/Profile';
 import TrangChu from './pages/TrangChu/TrangChu';
 import { HomeTemplate } from './templates/HomeTemplate';
 import {AdminTemplate} from './templates/AdminTemplate'
+import Booking from './pages/Booking/Booking';
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
         <AdminTemplate exact path="/admin/films" Component={FilmsManager} />
         <AdminTemplate exact path="/admin/users" Component={UserManager} />
 
+        <Route exact path="/booking/:maLichChieu" render={(propsRoute)=>{
+          return <Booking {...propsRoute} />
+        }} />
+        
         <Route exact path="/profile" component={Profile} />
         <Route exact path="*" component={PageNotFound} />
       </Switch>
